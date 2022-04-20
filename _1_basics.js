@@ -41,8 +41,8 @@ const reducer = (state = initialState, action) => {
 /***
  * Redux Store
  * One store for entire application
- * Responsibilities --
  *
+ * Responsibilities --
  * Hold app state
  * allow access to state via getState()
  * allow state to be updated via dispatch(action)
