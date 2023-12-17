@@ -3,6 +3,17 @@
  * shop = redux store
  * customer buy = action
  * shopkeeper = reducer
+ * 
+ * A store that holds the state of the app
+ * An action that describes what happened in the app
+ * A reducer which handles the action and decides how to update the state.
+ * 
+ * 
+ * Three Principles:
+ * The global state of the app is stored as an object inside a single store.
+ * The only way to change the state is to dispatch an action, an object that describes what happened.
+ * To specify how the state tree is updated based on actions, you write pure reducers.
+ * 
  */
 
 const redux = require("redux");
@@ -54,6 +65,8 @@ console.log("Initial State", store.getState());
 const unsubscribe = store.subscribe(() =>
   console.log("Updated State", store.getState())
 );
+
+
 store.dispatch(buyCake());
 store.dispatch(buyCake());
 store.dispatch(buyCake());
